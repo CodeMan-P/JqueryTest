@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-2.1.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var c = $("#l1").siblings("li[name=l2]").html();
+	
+	alert(c);
+	var l = $("#l1").siblings("li[name=l2]");
+	c= $(l).siblings("li[lid=3]").text();
+	alert(c);
+	var ul = l.parents("ul");
+	alert(ul.size)
+});
+</script>
+</head>
+<body>
+	<div>
+	<ul>
+		<li lid="3">asdfasdfsad</li>
+		<li name="l2">asdfasdfsad</li>
+		<li id="l1">asdfasdfsad</li>
+		</ul>
+	</div>
+</body>
+</html>
